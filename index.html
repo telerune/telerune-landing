@@ -3,34 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
+    <title>🔷Telerune</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #1e2337ff;
+            color: white;
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-        .container {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             text-align: center;
+            height: 100vh;
+            line-height: 1.6;
+            overflow-y: scroll;
         }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 0.5em;
+        .logo {
+            font-size: 60px;
+            color: #0098ea;
+            font-weight: bold;
+            margin-top: 50%;
+            margin-bottom: 50%;
         }
-        p {
-            font-size: 1.2em;
-            color: #555;
+        .button {
+            margin-top: 25%;
+            margin-bottom: 25%;
+            padding: 10px 20px;
+            background-color: #0098ea;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: not-allowed;
+        }
+        .content {
+            padding: 0 20px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .content h2, .content h3 {
+            color: #0098ea;
+        }
+        .content p, .content li {
+            margin-bottom: 15px;
+        }
+        .content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .content ul li::before {
+            content: "• ";
+            color: #0098ea;
+        }
+        .highlight {
+            color: #0098ea;
+            font-weight: bold;
+        }
+        .coming-soon {
+            font-size: 24px;
+            color: #0098ea;
+            margin-top: 40px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Landing Page</h1>
-        <p>This is a super simple landing page using GitHub Pages.</p>
+    <div class="logo">🔷Telerune</div>
+    <button class="button">Coming Soon</button>
+    <div class="content">
+        <p><span class="highlight">🔷Telerune</span> is a Telegram app to help users manage their <span class="highlight">Bitcoins</span>, <span class="highlight">Ordinals</span> & <span class="highlight">Runes</span>.</p>
+        <h3>The Bitcoin Ecosystem</h3>
+        <p>A Bitcoin token ecosystem has emerged recently:</p>
+        <ul>
+            <li><span class="highlight">Ordinal Theory:</span> A protocol to track and identify every single Satoshi, turning them into Non-Fungible Tokens.</li>
+            <li><span class="highlight">Inscriptions:</span> A method to attach data to a single Satoshi, enabling on-chain metadata storage.</li>
+            <li><span class="highlight">Runes:</span> A protocol to create and transfer Fungible Tokens based on Bitcoin’s UTXO model.</li>
+        </ul>
+        <h3>The Problem</h3>
+        <ul>
+            <li><span class="highlight">Bad UX:</span> Bitcoin tokens are in early stage with primitive management tools.</li>
+            <li><span class="highlight">High Fees:</span> The Bitcoin blockchain has low throughput and intends to stay this way.</li>
+            <li><span class="highlight">Not on Telegram:</span> The Telegram @wallet app only supports BTC and not Ordinals or Runes.</li>
+        </ul>
+        <h3>The Solution</h3>
+        <ul>
+            <li><span class="highlight">Good UX: 🔷Telerune</span> is a Telegram Mini App that makes Bitcoin token management simple and fun!</li>
+            <li><span class="highlight">Save Fees: 🔷Telerune</span> optimizes Bitcoin transaction fees or even remove them!</li>
+            <li><span class="highlight">On Telegram: 🔷Telerune</span> compliments Telegram @wallet by adding Ordinals & Runes into its ecosystem!</li>
+        </ul>
     </div>
+    <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
