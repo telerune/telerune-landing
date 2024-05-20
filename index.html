@@ -12,6 +12,7 @@
             color: #f0f0f0;
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
+            line-height: 1.5;
             background-color: #1c1c1c;
         }
 
@@ -123,27 +124,49 @@
         }
 
         .wallet-section {
-            background-color: #333333;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: .5em;
+            padding: .375em .5em;
+            background-color: rgba(255,255,255,.1);
+            border-radius: 1em;
         }
 
         .wallet-section .wallet-name {
             display: flex;
             align-items: center;
+            gap: .5em;
         }
 
-        .wallet-section .wallet-name span {
-            margin-right: 10px;
-            font-size: 1.1em;
+        .wallet-section .symbol {
+            font-size: 225%;
         }
 
-        .wallet-section .wallet-balance {
-            font-size: 1.1em;
+        .wallet-section .balance,
+        .wallet-section .title {
+            font-size: 87.5%;
+        }
+
+        .wallet-section .number {
+            font-size: 75%;
+            opacity: 75%;
+        }
+
+        .wallet-section > :last-child {
+            padding-right: .375em;
+        }
+
+        .wallet-section .change {
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            justify-content: end;
+            font-size: 75%;
+        }
+
+        .wallet-section .change svg {
+            height: 1.5em;
         }
 
         .open-button {
@@ -169,7 +192,7 @@
             padding: 10px;
             border-radius: 8px;
             margin-bottom: 10px;
-            display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
@@ -239,37 +262,73 @@
         </div>
         <div class="wallet-section">
             <div class="wallet-name">
-                <span>🟠</span>
-                <span>BTC</span>
+                <div class="symbol">🟠</div>
+                <div>
+                    <div class="title">BTC</div>
+                    <div class="number">Rune #L33</div>
+                </div>
             </div>
-            <div class="wallet-balance">$123.45</div>
+            <div>
+                <div class="balance">$123.45</div>
+                <div class="change">
+                    <svg focusable="false" viewBox="0 0 24 24"><path d="m16.85 6.85 1.44 1.44-4.88 4.88-3.29-3.29a.9959.9959 0 0 0-1.41 0l-6 6.01c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L9.41 12l3.29 3.29c.39.39 1.02.39 1.41 0l5.59-5.58 1.44 1.44c.31.31.85.09.85-.35V6.5c.01-.28-.21-.5-.49-.5h-4.29c-.45 0-.67.54-.36.85"></path></svg>
+                    <span>2.5%</span>
+                </div>
+            </div>
         </div>
         <div class="wallet-section">
             <div class="wallet-name">
-                <span>⬜️</span>
-                <span>UNCOMMON•GOODS</span>
+                <div class="symbol">⬜️</div>
+                <div>
+                    <div class="title">UNCOMMON•GOODS</div>
+                    <div class="number">Rune #0</div>
+                </div>
             </div>
-            <div class="wallet-balance">$696.96</div>
+            <div>
+                <div class="balance">$696.96</div>
+                <div class="change">
+                    <svg focusable="false" viewBox="0 0 24 24"><path d="m16.85 6.85 1.44 1.44-4.88 4.88-3.29-3.29a.9959.9959 0 0 0-1.41 0l-6 6.01c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L9.41 12l3.29 3.29c.39.39 1.02.39 1.41 0l5.59-5.58 1.44 1.44c.31.31.85.09.85-.35V6.5c.01-.28-.21-.5-.49-.5h-4.29c-.45 0-.67.54-.36.85"></path></svg>
+                    <span>2.5%</span>
+                </div>
+            </div>
         </div>
         <div class="wallet-section">
             <div class="wallet-name">
-                <span>🔘</span>
-                <span>RSIC•GENESIS•RUNES</span>
+                <div class="symbol">🔘</div>
+                <div>
+                    <div class="title">RSIC•GENESIS•RUNES</div>
+                    <div class="number">Rune #8</div>
+                </div>
             </div>
-            <div class="wallet-balance">$420.69</div>
+            <div>
+                <div class="balance">$420.69</div>
+                <div class="change">
+                    <svg focusable="false" viewBox="0 0 24 24"><path d="m16.85 6.85 1.44 1.44-4.88 4.88-3.29-3.29a.9959.9959 0 0 0-1.41 0l-6 6.01c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L9.41 12l3.29 3.29c.39.39 1.02.39 1.41 0l5.59-5.58 1.44 1.44c.31.31.85.09.85-.35V6.5c.01-.28-.21-.5-.49-.5h-4.29c-.45 0-.67.54-.36.85"></path></svg>
+                    <span>2.5%</span>
+                </div>
+            </div>
         </div>
         <div class="wallet-section">
             <div class="wallet-name">
-                <span>🤪</span>
-                <span>FUNNY•FISH•MASK</span>
+                <div class="symbol">🤪</div>
+                <div>
+                    <div class="title">FUNNY•FISH•MASK</div>
+                    <div class="number">Rune #67947</div>
+                </div>
             </div>
-            <div class="wallet-balance">$55.55</div>
+            <div>
+                <div class="balance">$55.55</div>
+                <div class="change">
+                    <svg focusable="false" viewBox="0 0 24 24"><path d="m16.85 6.85 1.44 1.44-4.88 4.88-3.29-3.29a.9959.9959 0 0 0-1.41 0l-6 6.01c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L9.41 12l3.29 3.29c.39.39 1.02.39 1.41 0l5.59-5.58 1.44 1.44c.31.31.85.09.85-.35V6.5c.01-.28-.21-.5-.49-.5h-4.29c-.45 0-.67.54-.36.85"></path></svg>
+                    <span>2.5%</span>
+                </div>
+            </div>
         </div>
         <div class="transaction-history">
             <h2>TRANSACTION HISTORY</h2>
             <div class="transaction-section">
                 <div class="transaction-name">
-                    <span>➕</span>
+                    <div>➕</span>
                     <span>Received from @vitalik</span>
                 </div>
                 <div class="transaction-amount">+ $88 🟠</div>
