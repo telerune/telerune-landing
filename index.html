@@ -25,16 +25,18 @@
         button {
             display: flex;
             align-items: center;
+            gap: .5em;
             justify-content: center;
             min-width: 2.5rem;
             height: 2.5rem;
             margin: 0;
-            padding: 1.5em;
+            padding: 0 1.5em;
             color: #fff;
             font-size: 1rem;
             cursor: pointer;
             background: transparent;
             border: none;
+            transition: all 300ms ease;
         }
 
         button.btn-circle {
@@ -96,19 +98,28 @@
 
         .buttons {
             display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
+            gap: .5em;
+            margin: .75rem 0;
         }
 
-        .buttons div {
-            display: flex;
+        .buttons button {
             flex-direction: column;
-            align-items: center;
-            color: #0098ea;
+            width: 100%;
+            height: 4.5rem;
+            padding: 0;
+            font-size: .8125rem;
         }
 
-        .buttons div span {
-            margin-top: 5px;
+        .buttons button svg {
+            height: 2.75em;
+            padding: .375em;
+            background: rgba(255,255,255,.1);
+            border-radius: 1rem;
+        }
+
+        .buttons button:focus svg,
+        .buttons button:hover svg {
+            background: #0098ea;
         }
 
         .wallet-section {
@@ -209,22 +220,22 @@
             </div>
         </div>
         <div class="buttons">
-            <div>
-                <img src="https://img.icons8.com/ios-filled/50/0098ea/upload.png" alt="Send" />
+            <button>
+                <svg focusable="false" viewBox="0 0 24 24"><path d="M9 6c0 .56.45 1 1 1h5.59L4.7 17.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L17 8.41V14c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-8c-.55 0-1 .45-1 1"></path></svg>
                 <span>Send</span>
-            </div>
-            <div>
-                <img src="https://img.icons8.com/ios-filled/50/0098ea/download.png" alt="Receive" />
+            </button>
+            <button>
+                <svg focusable="false" viewBox="0 0 24 24"><path d="M15 18c0-.56-.45-1-1-1H8.41L19.3 6.11c.39-.39.39-1.02 0-1.41a.9959.9959 0 0 0-1.41 0L7 15.59V10c0-.55-.45-1-1-1s-1 .45-1 1v8c0 .55.45 1 1 1h8c.55 0 1-.45 1-1"></path></svg>
                 <span>Receive</span>
-            </div>
-            <div>
-                <img src="https://img.icons8.com/ios-filled/50/0098ea/plus.png" alt="Create" />
+            </button>
+            <button>
+                <svg focusable="false" viewBox="0 0 24 24"><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1"></path></svg>
                 <span>Create</span>
-            </div>
-            <div>
-                <img src="https://img.icons8.com/ios-filled/50/0098ea/refresh.png" alt="Trade" />
+            </button>
+            <button>
+                <svg focusable="false" viewBox="0 0 24 24"><path d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85zM8.65 3.35 5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0"></path></svg>
                 <span>Trade</span>
-            </div>
+            </button>
         </div>
         <div class="wallet-section">
             <div class="wallet-name">
