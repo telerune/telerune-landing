@@ -3,97 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔷Telerune</title>
+    <title>Crypto Wallet</title>
     <style>
         body {
-            background-color: #1e2337ff;
-            color: white;
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #1c1c1c;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .total-balance {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .buttons div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            height: 100vh;
-            line-height: 1.6;
-            overflow-y: scroll;
+            color: #7a6cf4;
         }
-        .logo {
-            font-size: 60px;
-            color: #0098ea;
-            font-weight: bold;
-            margin-top: 50%;
-            margin-bottom: 50%;
+
+        .buttons div span {
+            margin-top: 5px;
         }
-        .button {
-            margin-top: 25%;
-            margin-bottom: 25%;
-            padding: 10px 20px;
-            background-color: #0098ea;
-            border: none;
+
+        .wallet-section {
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wallet-section .wallet-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .wallet-section .wallet-name span {
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+
+        .wallet-section .wallet-balance {
+            font-size: 1.1em;
+        }
+
+        .open-button {
+            background-color: #3a3aff;
+            padding: 5px 10px;
             border-radius: 5px;
-            color: white;
-            font-size: 18px;
-            cursor: not-allowed;
+            color: #ffffff;
         }
-        .content {
-            padding: 0 20px;
+
+        .transaction-history {
+            margin-top: 20px;
+        }
+
+        .transaction-history h2 {
             text-align: left;
-            font-size: 20px;
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #888;
         }
-        .content h2, .content h3 {
-            color: #0098ea;
+
+        .transaction-section {
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .content p, .content li {
-            margin-bottom: 15px;
+
+        .transaction-section .transaction-name {
+            display: flex;
+            align-items: center;
         }
-        .content ul {
-            list-style: none;
-            padding-left: 0;
+
+        .transaction-section .transaction-name span {
+            margin-right: 10px;
+            font-size: 1.1em;
         }
-        .content ul li::before {
-            content: "• ";
-            color: #0098ea;
-        }
-        .highlight {
-            color: #0098ea;
-            font-weight: bold;
-        }
-        .coming-soon {
-            font-size: 24px;
-            color: #0098ea;
-            margin-top: 40px;
-            text-align: center;
+
+        .transaction-section .transaction-amount {
+            font-size: 1.1em;
         }
     </style>
 </head>
 <body>
-    <div class="logo">🔷Telerune</div>
-    <button class="button">Coming Soon</button>
-    <div class="content">
-        <p><span class="highlight">🔷Telerune</span> is a Telegram app to help users manage their <span class="highlight">Bitcoins</span>, <span class="highlight">Ordinals</span> & <span class="highlight">Runes</span>.</p>
-        <h3>The Bitcoin Ecosystem</h3>
-        <p>A Bitcoin token ecosystem has emerged recently:</p>
-        <ul>
-            <li><span class="highlight">Ordinal Theory:</span> A protocol to track and identify every single Satoshi, turning them into Non-Fungible Tokens.</li>
-            <li><span class="highlight">Inscriptions:</span> A method to attach data to a single Satoshi, enabling on-chain metadata storage.</li>
-            <li><span class="highlight">Runes:</span> A protocol to create and transfer Fungible Tokens based on Bitcoin’s UTXO model.</li>
-        </ul>
-        <h3>The Problem</h3>
-        <ul>
-            <li><span class="highlight">Bad UX:</span> Bitcoin tokens are in early stage with primitive management tools.</li>
-            <li><span class="highlight">High Fees:</span> The Bitcoin blockchain has low throughput and intends to stay this way.</li>
-            <li><span class="highlight">Not on Telegram:</span> The Telegram @wallet app only supports BTC and not Ordinals or Runes.</li>
-        </ul>
-        <h3>The Solution</h3>
-        <ul>
-            <li><span class="highlight">Good UX: 🔷Telerune</span> is a Telegram Mini App that makes Bitcoin token management simple and fun!</li>
-            <li><span class="highlight">Save Fees: 🔷Telerune</span> optimizes Bitcoin transaction fees or even remove them!</li>
-            <li><span class="highlight">On Telegram: 🔷Telerune</span> compliments Telegram @wallet by adding Ordinals & Runes into its ecosystem!</li>
-        </ul>
+    <div class="container">
+        <div class="header">
+            <img src="https://img.icons8.com/ios-filled/50/7a6cf4/settings.png" alt="Settings" />
+            <img src="https://img.icons8.com/ios-filled/50/7a6cf4/qr-code.png" alt="Scan QR code" />
+        </div>
+        <div class="total-balance">
+            <div>Total balance</div>
+            <div>$1,234.56</div>
+        </div>
+        <div class="buttons">
+            <div>
+                <img src="https://img.icons8.com/ios-filled/50/7a6cf4/upload.png" alt="Send" />
+                <span>Send</span>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/ios-filled/50/7a6cf4/plus-math.png" alt="Add Crypto" />
+                <span>Add Crypto</span>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/ios-filled/50/7a6cf4/exchange.png" alt="Exchange" />
+                <span>Exchange</span>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/ios-filled/50/7a6cf4/market-square.png" alt="P2P Market" />
+                <span>P2P Market</span>
+            </div>
+        </div>
+        <div class="wallet-section">
+            <div class="wallet-name">
+                <span>🟠</span>
+                <span>BTC</span>
+            </div>
+            <div class="wallet-balance">$123.45</div>
+        </div>
+        <div class="wallet-section">
+            <div class="wallet-name">
+                <span>⬛️</span>
+                <span>UNCOMMON•GOODS</span>
+            </div>
+            <div class="wallet-balance">$696.96</div>
+        </div>
+        <div class="wallet-section">
+            <div class="wallet-name">
+                <span>🔘</span>
+                <span>RSIC•GENESIS•RUNES</span>
+            </div>
+            <div class="wallet-balance">$420.69</div>
+        </div>
+        <div class="wallet-section">
+            <div class="wallet-name">
+                <span>🐶</span>
+                <span>DOG•GO•TO•THE•MOON</span>
+            </div>
+            <div class="wallet-balance">$55.55</div>
+        </div>
+        <div class="transaction-history">
+            <h2>TRANSACTION HISTORY</h2>
+            <div class="transaction-section">
+                <div class="transaction-name">
+                    <span>➕</span>
+                    <span>Received from @vitalik</span>
+                </div>
+                <div class="transaction-amount">+ $100 🟠</div>
+            </div>
+            <div class="transaction-section">
+                <div class="transaction-name">
+                    <span>➖</span>
+                    <span>Sent to @satosih</span>
+                </div>
+                <div class="transaction-amount">- $69 ⬛️</div>
+            </div>
+            <div class="transaction-section">
+                <div class="transaction-name">
+                    <span>🔀</span>
+                    <span>Swapped 🔘 for 🐶</span>
+                </div>
+                <div class="transaction-amount">+ $50 🐶</div>
+            </div>
+            <div class="transaction-section">
+                <div class="transaction-name">
+                    <span>💲</span>
+                    <span>Minted 🔘</span>
+                </div>
+                <div class="transaction-amount">+ $20 🔘</div>
+            </div>
+        </div>
     </div>
-    <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
+
